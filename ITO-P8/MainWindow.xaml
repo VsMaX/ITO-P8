@@ -5,18 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ITO_P8"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800
-        ">
+        Title="MainWindow" Height="800" Width="800"
+        >
+    <Window.DataContext>
+        <local:ActionsVm/>
+    </Window.DataContext>
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Height="73" Width="772"/>
-        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="80" Width="772">
+        <Label x:Name="label1" Content="Initial state" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.248,0.286" Width="322" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Goal" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.248,0.286" Width="322" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="Available actions" HorizontalAlignment="Left" Margin="10,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.248,0.286" Width="322" FontWeight="Bold"/>
+        <TextBox x:Name="initalStateTextBox" HorizontalAlignment="Left" Height="91" Margin="10,34,0,0" TextWrapping="Wrap" Text="{Binding Path=InitialState}" VerticalAlignment="Top" Width="772"/>
+        <TextBox x:Name="goalStateTextBox" HorizontalAlignment="Left" Height="91" Margin="10,156,0,0" TextWrapping="Wrap" Text="{Binding Path=Goal}" VerticalAlignment="Top" Width="772"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Height="449" Width="772" AutoGenerateColumns="False" ItemsSource="{Binding Path=ViewModel}">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
+                <DataGridTextColumn Binding="{Binding Path=ActionName}" ClipboardContentBinding="{x:Null}" Header="Action name" CanUserSort="False" CanUserReorder="False" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Path=Preconditions}" ClipboardContentBinding="{x:Null}" Header="Action preconditions" CanUserSort="False" CanUserReorder="False" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Path=Posteffects}" ClipboardContentBinding="{x:Null}" Header="Action posteffects" CanUserSort="False" CanUserReorder="False" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left" Margin="10,422,0,0" VerticalAlignment="Top" Height="337" Width="772"/>
-
+        <Button x:Name="button" Content="Add row" HorizontalAlignment="Left" Margin="10,739,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>

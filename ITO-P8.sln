@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITO-P8", "ITO-P8\ITO-P8.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITO-Graph", "ITO-Graph\ITO-Graph.csproj", "{FE1D96ED-3E64-4F33-A58B-B8ECDF191256}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITO-Test", "ITO-Test\ITO-Test.csproj", "{92D6CDC2-524E-4737-9FE5-3DA44E1FCC99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FE1D96ED-3E64-4F33-A58B-B8ECDF191256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1D96ED-3E64-4F33-A58B-B8ECDF191256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1D96ED-3E64-4F33-A58B-B8ECDF191256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D6CDC2-524E-4737-9FE5-3DA44E1FCC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D6CDC2-524E-4737-9FE5-3DA44E1FCC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D6CDC2-524E-4737-9FE5-3DA44E1FCC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D6CDC2-524E-4737-9FE5-3DA44E1FCC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
